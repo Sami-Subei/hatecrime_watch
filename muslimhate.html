@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Hate Crime Counter</title>
+  <style>
+    body { font-family: Times New Roman, sans-serif; text-align: center; margin-top: 10%; }
+    #counter { font-family: Courier New;font-size: 4em; color: darkred; }
+
+  </style>
+</head>
+<body>
+
+<h1>Estimated Anti-Arab/Anti-Muslim Hate Crimes in 2024</h1>
+<div id="counter">2640</div>
+<p>Estimated based on 2023 CAIR data (8,061 reports). Updated every second.</p>
+
+<script>
+  let count = 2640;
+  const ratePerSecond = 0.000255;
+
+  setInterval(() => {
+    count += ratePerSecond;
+    document.getElementById("counter").innerText = count.toFixed(0);
+  }, 1000);
+</script>
+
+</body>
+</html>
